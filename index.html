@@ -106,6 +106,10 @@
           <a href="about.html" class="btn btn-primary text-uppercase pb-2 active" role="button" aria-pressed="true">Прочети
             още</a>
         </div>
+        <br/>
+        <h2>Нашата оферта</h2>
+        <p class="lead">Къщата се дава за минимум две нощувки. Изисква се депозит в размер на 20% от общата стойност на престоя.</p>
+    <p class="lead"> Леглата в спалните са за 4 човека,но при нужда имаме възможност да ви предоставим допълнително легло.</p>
         <div style="font-size: 24px;">
           Цена за нощувка - <span style="color: green;"> 240 лв. </span>
       </div>
@@ -274,51 +278,53 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <div class="d-flex justify-content-center align-items-center">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FSofia&bgcolor=%23ffffff&showTitle=0&showTabs=0&showPrint=0&showCalendars=0&showTz=0&src=YWxpbWt1bmV2MTIzQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" width="300" height="220"></iframe>
-      </div>
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FSofia&bgcolor=%23ffffff&showTitle=0&showTabs=0&showPrint=0&showCalendars=0&showTz=0&src=YWxpbWt1bmV2MTIzQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" width="300" height="220"></iframe>
+        </div>
         <h2 class="modal-title text-center pb-4">Резервирай</h2>
 
-        <form>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLScRTCaQ5pqyVxrTCeJvc7LOainDkeC3v5ZpZcbuLGiM-yMbNQ/formResponse" method="POST">
 
           <fieldset class="form-group">
             <div class="form-group form-row">
               <div class="form-group col">
-                <label class="col-form-label" for="fullName">Име</label>
-                <input class="form-control" type="text" id="fullName" >
+                <label class="col-form-label" for="entry.1746337358">Име</label>
+                <input class="form-control" type="text" name="entry.1746337358" id="fullName" >
               </div><!-- form-group -->
 
               <div class="form-group col">
-                <label class="col-form-label" for="phone">Телефон</label>
-                <input class="form-control" type="text" id="phone">
-              </div><!-- form-group -->
-            </div><!-- form-group -->
-
-            <div class="form-group form-row">
-              <div class="form-group col">
-                <label class="col-form-label" for="check-in">Пристигане</label>
-                <input class="form-control" type="date" id="check-in" >
-              </div><!-- form-group -->
-
-              <div class="form-group col">
-                <label class="col-form-label" for="check-out">Тръгване</label>
-                <input class="form-control" type="date" id="check-out">
+                <label class="col-form-label" for="entry.606100802">Телефон</label>
+                <input class="form-control" name="entry.606100802" type="text" id="phone">
               </div><!-- form-group -->
             </div><!-- form-group -->
 
             <div class="form-group form-row">
               <div class="form-group col">
-                <label class="col-form-label">Възрастни</label>
-                <select class="form-control">
+                <label class="col-form-label"  for="entry.1726069401">Пристигане</label>
+                <input class="form-control" name="entry.1726069401" type="date" id="check-in" >
+              </div><!-- form-group -->
+
+              <div class="form-group col">
+                <label class="col-form-label" for="entry.1999718021">Тръгване</label>
+                <input class="form-control" name="entry.1999718021" type="date" id="check-out">
+              </div><!-- form-group -->
+            </div><!-- form-group -->
+
+            <div class="form-group form-row">
+              <div class="form-group col">
+                <label class="col-form-label" for="entry.383894266">Възрастни</label>
+                <select class="form-control" name="entry.383894266">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
+                  <option>5</option>
                 </select>
               </div><!-- form-group -->
 
               <div class="form-group col">
-                <label class="col-form-label">Деца</label>
-                <select class="form-control">
+                <label class="col-form-label" for="entry.555792694">Деца</label>
+                <select class="form-control" name="entry.555792694">
+                  <option>0</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
