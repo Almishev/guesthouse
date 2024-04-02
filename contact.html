@@ -320,8 +320,61 @@
   </footer>
 
   <!-- End of Footer -->
+  <!-- Add this script to your HTML file -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('form');
 
+    form.addEventListener('submit', function(event) {
+      const ownerName = document.getElementById('ownername');
+      const ownerEmail = document.getElementById('owneremail');
+      const subject = document.getElementById('subject');
+      const yourMessage = document.getElementById('yourmessage');
 
+      if (!ownerName.value.trim()) {
+        alert('Моля, въведете вашето име.');
+        ownerName.focus();
+        event.preventDefault();
+        return;
+      }
+
+      if (!ownerEmail.value.trim()) {
+        alert('Моля,въведете вашия имейл.');
+        ownerEmail.focus();
+        event.preventDefault();
+        return;
+      }
+
+      if (!isValidEmail(ownerEmail.value.trim())) {
+        alert('Моля, въведете валиден идейл.');
+        ownerEmail.focus();
+        event.preventDefault();
+        return;
+      }
+
+      if (!subject.value.trim()) {
+        alert('Моля, въведете тема');
+        subject.focus();
+        event.preventDefault();
+        return;
+      }
+
+      if (!yourMessage.value.trim()) {
+        alert('Моля, въведете съобщение');
+        yourMessage.focus();
+        event.preventDefault();
+        return;
+      }
+    });
+
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  });
+</script>
+
+  <script src="js/dateValid.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.js"></script>

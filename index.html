@@ -437,35 +437,7 @@
 
   <!-- End of Footer -->
 
- <!-- Add this script to your HTML file -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const checkInInput = document.getElementById('check-in');
-    const checkOutInput = document.getElementById('check-out');
-
-    // Disable past dates for check-in date
-    checkInInput.min = new Date().toISOString().split("T")[0];
-
-    // Disable past dates for check-out date and set minimum check-out date based on check-in date
-    checkInInput.addEventListener('change', function() {
-      checkOutInput.min = new Date(checkInInput.valueAsDate.getTime() + 2 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
-      checkOutInput.value = '';
-    });
-
-    // Add validation for check-out date to be at least two days after check-in date
-    checkOutInput.addEventListener('change', function() {
-      const checkOutDate = new Date(checkOutInput.valueAsDate);
-      const checkInDate = new Date(checkInInput.valueAsDate);
-      const minCheckOutDate = new Date(checkInDate.getTime() + 2 * 24 * 60 * 60 * 1000);
-
-      if (checkOutDate < minCheckOutDate) {
-        alert('Check-out date must be at least two days after check-in date');
-        checkOutInput.value = '';
-      }
-    });
-  });
-</script>
-
+  <script src="js/dateValid.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.js"></script>
