@@ -11,7 +11,7 @@
 
     // Set minimum check-in date as one day after today
     const minCheckInDate = new Date();
-    minCheckInDate.setDate(minCheckInDate.getDate() + 1);
+    minCheckInDate.setDate(minCheckInDate.getDate());
     checkInInput.min = minCheckInDate.toISOString().split("T")[0];
 
     // Set minimum check-out date based on the selected check-in date
